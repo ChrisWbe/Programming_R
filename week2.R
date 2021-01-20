@@ -174,4 +174,12 @@ h <- function(x, y = NULL, d = 3L) {
 
 #Tarea numero 1
 source("Programming_R/ProgrammingAssignment1/pollutantmean.R")
-data = pollutantmean("Programming_R/ProgrammingAssignment1/specdata", pollutant = "sulfate", id = 2:10)
+pollutantmean("Programming_R/ProgrammingAssignment1/specdata", pollutant = "nitrate")
+
+source("Programming_R/ProgrammingAssignment1/complete.R")
+cc = complete("Programming_R/ProgrammingAssignment1/specdata", 332:1)
+use <- sample(332, 10)
+print(cc[use, "nobs"])
+source("Programming_R/ProgrammingAssignment1/corr.R")
+data = corr("Programming_R/ProgrammingAssignment1/specdata", 1)
+
