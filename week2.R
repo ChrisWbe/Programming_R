@@ -174,12 +174,15 @@ h <- function(x, y = NULL, d = 3L) {
 
 #Tarea numero 1
 source("Programming_R/ProgrammingAssignment1/pollutantmean.R")
-pollutantmean("Programming_R/ProgrammingAssignment1/specdata", pollutant = "nitrate")
+pollutantmean("Programming_R/ProgrammingAssignment1/specdata","nitrate")
 
 source("Programming_R/ProgrammingAssignment1/complete.R")
 cc = complete("Programming_R/ProgrammingAssignment1/specdata", 332:1)
 use <- sample(332, 10)
 print(cc[use, "nobs"])
 source("Programming_R/ProgrammingAssignment1/corr.R")
-data = corr("Programming_R/ProgrammingAssignment1/specdata", 1)
-
+cr = corr("Programming_R/ProgrammingAssignment1/specdata",2000)
+n <- length(cr)                
+cr <- corr("Programming_R/ProgrammingAssignment1/specdata", 1000)                
+cr <- sort(cr)
+print(c(n, round(cr, 4)))
